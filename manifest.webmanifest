@@ -1,13 +1,11 @@
 {
-  "name": "万象工具箱 Pro",
-  "short_name": "万象工具箱",
-  "description": "本地优先的中文万能工具箱",
-  "start_url": "./index.html",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#090a0c",
-  "theme_color": "#0a0b0d",
-  "icons": [
-    {"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
-  ]
+  "name":"万象工具箱 Pro",
+  "short_name":"万象工具箱",
+  "description":"快捷指令、安全实验室、证件照、图片、微信账单分析与钱迹联动",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#07090d",
+  "theme_color":"#07090d",
+  "icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
 }
