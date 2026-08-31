@@ -1,1 +1,35 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07090d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="万象工具箱"><meta name="description" content="快捷指令、安全实验室、证件照、图片、微信账单分析与钱迹联动"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"><link rel="apple-touch-icon" href="./icon.svg"><title>万象工具箱 Pro</title></head><body style="background:#07090d;color:#fff;font-family:-apple-system;padding:24px">正在启动万象工具箱 Pro v4…<script>(async()=>{try{if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});let ps=await Promise.all(Array.from({length:8},(_,k)=>fetch(`./v4-${k+1}.txt?v=1`).then(r=>{if(!r.ok)throw Error('资源加载失败 '+(k+1));return r.text()}))),s=ps.join('').trim(),a=Uint8Array.from(atob(s),c=>c.charCodeAt(0)),d=new DecompressionStream('gzip'),t=await new Response(new Blob([a]).stream().pipeThrough(d)).text();document.open();document.write(t);document.close()}catch(e){document.body.innerHTML='<h2>启动失败</h2><p>请刷新页面；若仍失败，请清除 Safari 网站数据后重试。</p><small>'+e+'</small>'}})()</script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#07090d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="万象工具箱" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./icon.svg" />
+  <link rel="stylesheet" href="./style.css?v=5" />
+  <title>万象工具箱 Pro</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar glass">
+      <div>
+        <div class="eyebrow">LOCAL FIRST · iPHONE PWA · V5</div>
+        <h1>万象工具箱 <span>Pro</span></h1>
+        <p>快捷指令 · 图像 · 安全 · 记账 · 媒体 · 日常计算</p>
+      </div>
+      <button id="installHint" class="icon-btn" title="添加到主屏幕">＋</button>
+    </header>
+    <section class="hero"><div class="hero-card"><div class="hero-badge">超级搜索</div><input id="globalSearch" placeholder="搜索：证件照 / IP / 微信账单 / 钱迹 / 视频 / AES / 快捷指令…" autocomplete="off" /><div id="quickChips" class="chips"></div></div></section>
+    <nav id="categoryNav" class="category-nav"></nav>
+    <main id="toolGrid" class="tool-grid"></main>
+    <footer><div>万象工具箱 Pro · 本地优先</div><small>涉及密码、账单和照片的处理默认在浏览器本地完成；联网查询会明确提示。安全工具只用于你自己的设备、数据和明确授权环境。</small></footer>
+  </div>
+  <div id="modal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close></div><section class="modal-sheet glass"><div class="modal-head"><div><div id="modalKicker" class="eyebrow"></div><h2 id="modalTitle"></h2></div><button class="icon-btn" data-close>×</button></div><div id="modalBody" class="modal-body"></div></section></div>
+  <template id="fieldTemplate"><label class="field"><span></span><input /></label></template>
+  <script src="./app.js?v=5" defer></script>
+</body>
+</html>
