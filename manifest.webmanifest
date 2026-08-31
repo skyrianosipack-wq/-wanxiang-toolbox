@@ -9,7 +9,6 @@
   "theme_color":"#07090d",
   "icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}],
   "shortcuts":[
-    {"name":"快速记账","short_name":"记账","description":"打开万象快捷记账","url":"./?open=quickbook"},
-    {"name":"证件照换底","short_name":"换底","description":"打开证件照换底 Pro","url":"./?open=photobg"}
+    {"name":"快速记账","short_name":"记账","description":"打开万象快捷记账","url":"./?open=quickbook"}
   ]
 }
