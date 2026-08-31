@@ -1,0 +1,1 @@
+(async()=>{try{const s=await fetch('./v7patch.txt?v=7').then(r=>r.text());const bytes=Uint8Array.from(atob(s.trim()),c=>c.charCodeAt(0));const ds=new DecompressionStream('gzip');const code=await new Response(new Blob([bytes]).stream().pipeThrough(ds)).text();(0,eval)(code)}catch(e){console.error('V7 patch load failed',e)}})();
