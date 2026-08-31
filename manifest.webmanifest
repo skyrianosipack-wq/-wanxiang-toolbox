@@ -1,11 +1,15 @@
 {
   "name":"万象工具箱 Pro",
   "short_name":"万象工具箱",
-  "description":"iPhone 本地优先万能工具箱：快捷指令、证件照、图片增强、安全实验室、IP、微信账单、钱迹联动与媒体工具",
+  "description":"iPhone 本地优先万能工具箱：快捷记账、快捷指令、证件照换底、图片增强、安全实验室、IP、账单与媒体工具",
   "start_url":"./",
   "scope":"./",
   "display":"standalone",
   "background_color":"#07090d",
   "theme_color":"#07090d",
-  "icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+  "icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}],
+  "shortcuts":[
+    {"name":"快速记账","short_name":"记账","description":"打开万象快捷记账","url":"./?open=quickbook"},
+    {"name":"证件照换底","short_name":"换底","description":"打开证件照换底 Pro","url":"./?open=photobg"}
+  ]
 }
